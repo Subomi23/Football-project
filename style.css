@@ -8,53 +8,52 @@
 html,
 body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   margin: 0;
-  padding: 0;
 }
 
 body {
-  min-height: 100vh;
   min-height: 100dvh;
-  background: linear-gradient(135deg, #0052d4 10%, #65c7f7 50%, #9cecfb 58%);
-  overflow-x: hidden;
+  background: linear-gradient(
+    135deg,
+    #0052D4 10%,
+    #65C7F7 50%,
+    #9CECFB 58%
+  );
 }
 
 .card {
   width: 100%;
-  min-height: 100vh;
   min-height: 100dvh;
-  background: transparent;
-  padding: 40px 30px;
+  padding: 40px;
 }
-
+.name,
+.header,
+.view {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .name {
-  max-width: 800px;
-  margin: 0 auto 20px auto;
   color: white;
   text-align: center;
-  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-
 .header {
-  max-width: 800px;
-  margin: 0 auto 20px auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .header h2 {
-  font-size: 22px;
   color: white;
 }
 
-
 .backButton {
-  background: #0052d4;
+  background: #0052D4;
   border: none;
   color: white;
   font-size: 15px;
@@ -66,97 +65,69 @@ body {
 .backButton:hover {
   background: #003f9e;
 }
-
-
 .error {
   display: none;
-  max-width: 800px;
-  margin: 0 auto 15px auto;
-
   background: #ffe4e4;
   color: #c0392b;
   padding: 10px 14px;
   border-radius: 10px;
+  margin-bottom: 15px;
   font-size: 14px;
 }
 
-
 .loading {
-  max-width: 800px;
-  margin: 0 auto;
   text-align: center;
-  color: white;
+  color: #777;
   padding: 30px 0;
 }
 
-
-.view {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
+/* League list items */
 .league-item {
   display: flex;
   align-items: center;
-
   gap: 15px;
-
   padding: 14px 18px;
   margin-bottom: 8px;
-
   border-radius: 12px;
-
   cursor: pointer;
-
   transition: background 0.2s;
 }
 
 .league-item:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background: #f0f4fa;
 }
 
 .league-item img {
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
 }
 
 .league-item span {
-  font-size: 16px;
-  color: #222;
+  font-size: 15px;
+  color: #333;
 }
 
 .season-item {
-  padding: 14px 18px;
-  margin-bottom: 8px;
-
+  padding: 12px;
   border-radius: 12px;
-
   cursor: pointer;
-
-  font-size: 16px;
-  color: #222;
-
+  font-size: 15px;
+  color: #333;
   transition: background 0.2s;
 }
 
 .season-item:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background: #f0f4fa;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  overflow: hidden;
 }
 
-th,
-td {
+th, td {
   text-align: left;
   padding: 8px 6px;
   font-size: 13px;
@@ -185,8 +156,6 @@ td.team-cell img {
   color: #999;
   width: 20px;
 }
-
-/* Mobile */
 @media (max-width: 600px) {
   html,
   body {
@@ -195,50 +164,11 @@ td.team-cell img {
   }
 
   body {
-    overflow-x: hidden;
+    margin: 0;
   }
 
   .card {
-    width: 100%;
     min-height: 100dvh;
     padding: 25px 20px;
-  }
-
-  .name {
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-
-  .header h2 {
-    font-size: 20px;
-  }
-
-  .backButton {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .league-item {
-    padding: 13px 14px;
-  }
-
-  .league-item img {
-    width: 32px;
-    height: 32px;
-  }
-
-  .league-item span {
-    font-size: 15px;
-  }
-
-  .season-item {
-    padding: 13px 14px;
-    font-size: 15px;
-  }
-
-  th,
-  td {
-    padding: 7px 4px;
-    font-size: 12px;
   }
 }
