@@ -27,7 +27,6 @@ function showView(view) {
   view.style.display = "block";
 }
 
-// ---------- View 1: Leagues ----------
 
 async function loadLeagues() {
   hideError();
@@ -67,8 +66,6 @@ leaguesView.addEventListener("click", (event) => {
   selectedLeagueName = item.getAttribute("data-name");
   loadSeasons();
 });
-
-// ---------- View 2: Seasons ----------
 
 async function loadSeasons() {
   hideError();
@@ -114,7 +111,6 @@ seasonsView.addEventListener("click", (event) => {
   loadStandings(year);
 });
 
-// ---------- View 3: Standings ----------
 
 async function loadStandings(season) {
   hideError();
@@ -201,7 +197,6 @@ if (entry.stats) {
   `;
 }
 
-// ---------- Back button ----------
 
 backButton.addEventListener("click", () => {
   if (standingsView.style.display === "block") {
@@ -211,6 +206,5 @@ backButton.addEventListener("click", () => {
   }
 });
 
-// ---------- Start the app ----------
 
 loadLeagues();
