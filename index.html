@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StandFinder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1 class="name">StandFinder</h1>
+      <div class="header">
+        <h2 id="pageTitle">Leagues</h2>
+       <button id="backButton" class="backButton" style="display: none">← Back</button>
+      </div>
+
+      <div class="error">
+        <p>Something went wrong. Please try again.</p>
+      </div>
+      <div id="leaguesView" class="view">
+        <p class="loading">Loading leagues...</p>
+      </div>
+
+      <div id="seasonsView" class="view" style="display: none"></div>
+
+      <div id="standingsView" class="view" style="display: none"></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
